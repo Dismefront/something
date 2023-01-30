@@ -1,6 +1,6 @@
 import webpack from 'webpack';
 import { buildConfig } from './config/build/buildConfig';
-import { BuildPaths } from './config/build/types/config';
+import { BuildEnvironment, BuildPaths } from './config/build/types/config';
 import path from 'path';
 
 const paths: BuildPaths = {
@@ -9,10 +9,13 @@ const paths: BuildPaths = {
     entry: path.resolve(__dirname, "src", "index.ts")
 }
 
-const config: webpack.Configuration = buildConfig({
-    mode: 'production',
-    paths: paths,
-    debugger: true
-});
+export default (env: BuildEnvironment) => {
+    const config: webpack.Configuration = buildConfig({
+        mode: env.mode || 'development',
+        paths: paths,
+        loadingLogger: true,
+        port: env.port || 3030
+    });
 
-export default config;
+    return config;
+};
