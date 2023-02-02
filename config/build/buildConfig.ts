@@ -11,7 +11,7 @@ export function buildConfig(options: BuildOptions): Configuration {
         mode: options.mode,
         entry: options.paths.entry,
         output: {
-            filename: '[name].[contenthash].js',
+            filename: '[name].[contenthash:5].js',
             path: options.paths.build,
             clean: true
         },

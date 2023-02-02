@@ -1,9 +1,11 @@
 import { render } from "react-dom";
-import App from "./components/App";
+import './index.scss';
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
 
 render(
-    <App one="123" two="nigger">
-        <h1>alsdf</h1>
-    </App>,
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>,
     document.getElementById("root")
 );

@@ -20,11 +20,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
                 loader: "css-loader",
                 options: {
                     modules: {
-                        auto:
-                            (resourcePath: string) => {
-                                return Boolean(resourcePath.includes(".module."))
-                            },
-                        // TODO: REPLACE WITH REGEX
+                        auto: /\.module\./i,
                         localIdentName:
                             isDev
                                 ? "[path][name]__[local]--[hash:base64:5]"
