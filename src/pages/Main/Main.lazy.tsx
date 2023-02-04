@@ -1,10 +1,10 @@
 import React from "react"
 
-export const Home = React.lazy(() => {
+export const Main = React.lazy(() => {
     return new Promise(
         res => {
             /* @ts-ignore */
-            setTimeout(() => res(import('./Home')), 500);
+            setTimeout(() => res(import('./Main')), 500);
         }
     )
 });

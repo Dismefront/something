@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'minecraft-title';
+    src: url("../util/fonts/minecraft_evenings.ttf");
+}
+
+@font-face {
+    font-family: 'minecraft-regular';
+    src: url("../util/fonts/Minecraft.ttf");
+}
+
+.fgee {
+    font-size: 25px;
+    font-family: minecraft-regular;
+    font-weight: 100;
+}
+
+.fgee2 {
+    font-family: minecraft-title;
+    font-size: 2rem;
+}

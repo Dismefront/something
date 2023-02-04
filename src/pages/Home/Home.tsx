@@ -1,10 +1,10 @@
 import { ReactElement } from "react";
-
+import '../styles.scss';
 
 const Home = (): ReactElement => {
     return (
-        <div>
-            I am a boss
+        <div className="fgee2">
+            And this is my title
         </div>
     );
 };

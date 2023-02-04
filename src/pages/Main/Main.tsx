@@ -1,9 +1,10 @@
 import { ReactElement } from "react";
+import '../styles.scss';
 
 const Main = (): ReactElement => {
     return (
-        <div>
-            I am a bitch
+        <div className="fgee">
+            Hello nigger this is my first page presenting here
         </div>
     );
 };

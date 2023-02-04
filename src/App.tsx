@@ -2,12 +2,12 @@ import { ReactElement, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home/Home.lazy';
-import Main from './pages/Main/Main';
+import { Main } from './pages/Main/Main.lazy';
 
 const App = (): ReactElement => {
     return (
         <>
-            <Link to={'/main'}>Hello</Link>
+            <Link to={'/main'}>Hello</Link><br/>
             <Link to={'/home'}>World</Link>
             <Suspense fallback={<h4>loading...</h4>}>
                 <Routes>
