@@ -1,9 +1,8 @@
 import { ReactElement } from "react";
-import '../styles.scss';
 
 const Home = (): ReactElement => {
     return (
-        <div className="fgee2">
+        <div>
             And this is my title
         </div>
     );
