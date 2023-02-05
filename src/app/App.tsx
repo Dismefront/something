@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import { classNames } from 'shared/helpers/classNames/classNames';
 import { Home } from 'pages/Home/index';
 import { Main } from 'pages/Main/index';
-import 'styles/index.scss';
+import './styles/index.scss';
 import { useTheme } from 'shared/providers/ThemeProvider/index';
 
 
