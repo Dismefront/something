@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'minecraft-title';
-    src: url("../../shared/util/fonts/minecraft_evenings.ttf");
+    src: url("../../shared/files/fonts/minecraft_evenings.ttf");
 }
 
 @font-face {
     font-family: 'minecraft-regular';
-    src: url("../../shared/util/fonts/Minecraft.ttf");
+    src: url("../../shared/files/fonts/Minecraft.ttf");
 }
 
 :root {
@@ -18,5 +18,7 @@
 
     --font-size-l: 24px;
     --font-line-l: 32px;
-    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main)
+    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+    --navbar-height: 50px;
 }
