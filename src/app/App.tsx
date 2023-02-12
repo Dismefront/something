@@ -4,16 +4,19 @@ import './styles/index.scss';
 import { useTheme } from 'shared/providers/ThemeProvider/index';
 import RouteProvider from './providers/RouteProvider';
 import { Navbar } from 'widgets/navbar';
+import { SideBar } from 'widgets/SideBar';
 
 const App = (): ReactElement => {
 
-    const { theme, toggleTheme } = useTheme();
+    const { theme } = useTheme();
 
     return (
         <div className={classNames('app', {}, [theme])}>
             <Navbar />
-            <RouteProvider />
-            <button onClick={toggleTheme}>Change Theme</button><br/>
+            <div className='page'>
+                <SideBar />
+                <RouteProvider />
+            </div>
         </div>
     );
 };

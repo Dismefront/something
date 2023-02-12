@@ -1,6 +1,7 @@
 import classes from './Navbar.module.scss';
 import { classNames } from "shared/lib/classNames/classNames";
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink';
+import { AppLink, AppLinkTheme } from 'shared/tools/AppLink';
+import { ThemeSwitcher } from 'widgets/theme_switch';
 
 export interface NavbarProps {
     customClass?: string;
