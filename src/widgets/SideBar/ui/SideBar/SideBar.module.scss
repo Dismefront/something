@@ -1,0 +1,22 @@
+.SideBar {
+    height: calc(100vh - var(--navbar-height));
+    min-width: var(--sidebar-collapsed-width);
+    transition: min-width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.toggled {
+    min-width: var(--sidebar-open-width);
+}
+
+.switchers {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+}

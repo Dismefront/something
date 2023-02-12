@@ -37,7 +37,13 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         type: 'asset/resource',
     }
 
+    const svgLoader = {
+        test: /\.svg$/,
+        loader: '@svgr/webpack'
+    }
+
     return [
+        svgLoader,
         typescriptLoader,
         styleLoader,
         fileLoader
