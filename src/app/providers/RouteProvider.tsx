@@ -8,13 +8,18 @@ function RouteProvider() {
             <Suspense fallback={<h4>loading...</h4>}>
                 <Routes>
                     {
-                        routeConfig.map(({ path, element }) =>
-                            <Route key={path} path={path} element={element} />)
+                        routeConfig.map(({ path, element }) => (
+                            <Route
+                                key={path}
+                                path={path}
+                                element={element}
+                            />
+                        ))
                     }
                 </Routes>
             </Suspense>
         </div>
     );
-};
+}
 
 export default RouteProvider;

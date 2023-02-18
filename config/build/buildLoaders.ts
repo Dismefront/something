@@ -3,7 +3,6 @@ import webpack from 'webpack';
 import { BuildOptions } from './types/config';
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
-
     const isDev: boolean = options.mode === 'development';
 
     const typescriptLoader = {
@@ -17,36 +16,35 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         use: [
             isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             {
-                loader: "css-loader",
+                loader: 'css-loader',
                 options: {
                     modules: {
                         auto: /\.module\./i,
                         localIdentName:
                             isDev
-                                ? "[path][name]__[local]--[hash:base64:5]"
-                                : "[hash:base64:5]"
-                    }
-                }
+                                ? '[path][name]__[local]--[hash:base64:5]'
+                                : '[hash:base64:5]',
+                    },
+                },
             },
-            "sass-loader",
-        ]
-    }
+            'sass-loader',
+        ],
+    };
 
     const fileLoader = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
-    }
+    };
 
     const svgLoader = {
         test: /\.svg$/,
-        loader: '@svgr/webpack'
-    }
+        loader: '@svgr/webpack',
+    };
 
     return [
         svgLoader,
         typescriptLoader,
         styleLoader,
-        fileLoader
+        fileLoader,
     ];
-
 }

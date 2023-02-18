@@ -1,10 +1,8 @@
-import React from "react"
+import React from 'react';
 
-export const Main = React.lazy(() => {
-    return new Promise(
-        res => {
-            /* @ts-ignore */
-            setTimeout(() => res(import('./Main')), 500);
-        }
-    )
-});
+export const Main = React.lazy(() => new Promise(
+    (res) => {
+        /* @ts-ignore */
+        setTimeout(() => res(import('./Main')), 500);
+    },
+));

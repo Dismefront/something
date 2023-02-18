@@ -1,11 +1,9 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
-const Main = (): ReactElement => {
-    return (
-        <div>
-            Hello nigger this is my first page presenting here
-        </div>
-    );
-};
+const Main = (): ReactElement => (
+    <div>
+        Hello nigger this is my first page presenting here
+    </div>
+);
 
 export default Main;

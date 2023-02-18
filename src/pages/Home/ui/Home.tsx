@@ -1,11 +1,9 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
-const Home = (): ReactElement => {
-    return (
-        <div>
-            And this is my title
-        </div>
-    );
-};
+const Home = (): ReactElement => (
+    <div>
+        And this is my title
+    </div>
+);
 
 export default Home;

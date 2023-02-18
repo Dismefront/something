@@ -1,7 +1,7 @@
-import classes from './AppLink.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Link } from 'react-router-dom';
 import { FunctionComponent, PropsWithChildren } from 'react';
+import classes from './AppLink.module.scss';
 
 export enum AppLinkTheme {
     PRIMARY='primary',
@@ -16,7 +16,9 @@ export interface AppLinkProps {
 }
 
 export const AppLink: FunctionComponent<PropsWithChildren<AppLinkProps>> = (props) => {
-    const {children, theme=AppLinkTheme.PRIMARY, customClass, to} = props;
+    const {
+        children, theme = AppLinkTheme.PRIMARY, customClass, to,
+    } = props;
     return (
         <Link to={to} className={classNames(classes.AppLink, {}, [customClass, classes[theme]])}>
             {children}

@@ -6,6 +6,6 @@ export function classNames(cls: string, mods: Mods, additional: string[]):string
         ...additional,
         ...Object.entries(mods)
             .filter(([cls, val]) => Boolean(val))
-            .map(([cls]) => cls)
+            .map(([cls]) => cls),
     ].join(' ');
 }
