@@ -1,11 +1,11 @@
 .SideBar {
-    height: calc(100vh - var(--navbar-height));
-    min-width: var(--sidebar-collapsed-width);
-    transition: min-width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     background-color: var(--secondary-bg-color);
     display: flex;
     flex-direction: column;
+    height: calc(100vh - var(--navbar-height));
+    min-width: var(--sidebar-collapsed-width);
     position: relative;
+    transition: min-width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .toggled {
@@ -13,10 +13,10 @@
 }
 
 .switchers {
-    width: 100%;
-    height: 40px;
-    position: absolute;
     bottom: 10px;
     display: flex;
+    height: 40px;
     justify-content: center;
+    position: absolute;
+    width: 100%;
 }

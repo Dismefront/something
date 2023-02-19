@@ -1,14 +1,14 @@
 .Navbar {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    height: var(--navbar-height);
-    width: 100%;
     background-color: var(--secondary-bg-color);
+    display: flex;
+    height: var(--navbar-height);
+    justify-content: center;
+    width: 100%;
 }
 
 .links {
-    margin-left: auto;
     display: flex;
     flex-direction: row-reverse;
+    margin-left: auto;
 }
