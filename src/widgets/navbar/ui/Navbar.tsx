@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from 'shared/tools/AppLink';
-import { ThemeSwitcher } from 'widgets/theme_switch';
+import { ErrorThrower } from 'widgets/ErrorThrower';
 import classes from './Navbar.module.scss';
 
 export interface NavbarProps {
@@ -10,8 +10,21 @@ export interface NavbarProps {
 export const Navbar = ({ customClass }: NavbarProps) => (
     <div className={classNames(classes.Navbar, {}, [customClass])}>
         <div className={classes.links}>
-            <AppLink theme={AppLinkTheme.PURPLE} to="/home">Home</AppLink>
-            <AppLink theme={AppLinkTheme.PURPLE} to="/main">Main</AppLink>
+            <AppLink
+                customClass={classes.indent}
+                theme={AppLinkTheme.PURPLE}
+                to="/home"
+            >
+                Home
+            </AppLink>
+            <AppLink
+                customClass={classes.indent}
+                theme={AppLinkTheme.PURPLE}
+                to="/main"
+            >
+                Main
+            </AppLink>
+            <ErrorThrower customClass={classes.indent} />
         </div>
     </div>
 );

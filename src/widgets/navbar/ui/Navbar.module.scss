@@ -1,14 +1,18 @@
 .Navbar {
-    align-items: center;
     background-color: var(--secondary-bg-color);
     display: flex;
     height: var(--navbar-height);
-    justify-content: center;
     width: 100%;
 }
 
 .links {
+    align-items: center;
     display: flex;
     flex-direction: row-reverse;
-    margin-left: auto;
+    justify-content: end;
+    width: 100%;
+}
+
+.indent {
+    margin-right: 20px;
 }

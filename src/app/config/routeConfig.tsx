@@ -8,7 +8,7 @@ import { AppRoutes, RoutePaths } from 'shared/routes/AppRoutes';
 export const routeConfig: RouteProps[] = [
     {
         path: RoutePaths[AppRoutes.START],
-        element: <Navigate to={RoutePaths[AppRoutes.MAIN]} />,
+        element: <Navigate to={RoutePaths[AppRoutes.HOME]} />,
     },
     {
         path: RoutePaths[AppRoutes.MAIN],

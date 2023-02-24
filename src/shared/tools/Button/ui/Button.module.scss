@@ -1,7 +1,12 @@
 .Button {
     cursor: pointer;
-    display: inline-block;
     fill: var(--icon-color);
+    width: 100%;
+
+    .content {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .clean {
@@ -12,4 +17,32 @@
 .debug {
     background-color: red;
     border: 2px groove;
+}
+
+.minecraft {
+    background: url('../assets/bgbtn.png') center / cover;
+    box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+    font-size: var(--font-size-m);
+    height: var(--button-height);
+    image-rendering: pixelated;
+
+    .content {
+        align-items: center;
+        color: #DDD;
+        display: flex;
+        font-family: minecraft-regular, sans-serif;
+        justify-content: center;
+        text-shadow: 2px 2px #000A;
+    }
+
+    &:hover .content {
+        background-color: rgb(100 100 255 / 45%);
+		color: #FFFFA0;
+		text-shadow: 2px 2px #202013CC;
+    }
+
+    &:active {
+		box-shadow: inset -2px -4px #0004, inset 2px 2px #FFF5;
+	}
+
 }

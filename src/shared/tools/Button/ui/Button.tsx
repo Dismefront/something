@@ -4,7 +4,8 @@ import classes from './Button.module.scss';
 
 export enum ButtonTheme {
     CLEAN = 'clean',
-    VISIBLE = 'debug'
+    VISIBLE = 'debug',
+    MINECRAFT = 'minecraft'
 }
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -22,7 +23,9 @@ export const Button: FunctionComponent<ButtonProps> = (props) => {
             className={classNames(classes.Button, {}, [customClass, classes[theme]])}
             {...otherProps}
         >
-            {children}
+            <div className={classes.content}>
+                {children}
+            </div>
         </button>
     );
 };

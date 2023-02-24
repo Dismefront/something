@@ -1,0 +1,16 @@
+.PageError {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        color: #EEE;
+        font-family: minecraft-title, sans-serif;
+    }
+
+    p {
+        color: crimson;
+        font-family: minecraft-regular, sans-serif;
+        padding: 10px;
+    }
+}
