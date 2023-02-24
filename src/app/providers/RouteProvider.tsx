@@ -1,11 +1,12 @@
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { Spinner } from 'widgets/Spinner';
 import { routeConfig } from '../config/RouteConfig';
 
 function RouteProvider() {
     return (
         <div className="content">
-            <Suspense fallback={<h4>loading...</h4>}>
+            <Suspense fallback={<Spinner />}>
                 <Routes>
                     {
                         routeConfig.map(({ path, element }) => (
