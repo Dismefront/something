@@ -1,6 +1,8 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useState } from 'react';
 import { ThemeSwitcher } from 'widgets/theme_switch';
+import { Button } from 'shared/tools/Button';
+import { ButtonTheme } from 'shared/tools/Button/ui/Button';
 import classes from './SideBar.module.scss';
 
 export interface SideBarProps {
@@ -15,13 +17,21 @@ export const SideBar = ({ customClass }: SideBarProps) => {
     };
 
     return (
-        <div className={classNames(
-            classes.SideBar,
-            { [classes.toggled]: isCollapsed },
-            [customClass],
-        )}
+        <div
+            data-testid="sidebar"
+            className={classNames(
+                classes.SideBar,
+                { [classes.toggled]: isCollapsed },
+                [customClass],
+            )}
         >
-            <button type="button" onClick={toggle}>toggle</button>
+            <Button
+                theme={ButtonTheme.CLEAN}
+                data-testid="toggle-btn"
+                onClick={toggle}
+            >
+                toggle
+            </Button>
             <div className={classes.switchers}>
                 <ThemeSwitcher customClass={classes.theme} />
             </div>
