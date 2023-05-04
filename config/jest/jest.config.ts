@@ -38,8 +38,9 @@ export default {
     ],
     rootDir: '../../',
     moduleDirectories: [
-        'node_modules',
+        'node_modules', 'src',
     ],
+    testEnvironment: 'jsdom',
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
@@ -147,7 +148,6 @@ export default {
     // snapshotSerializers: [],
 
     // The test environment that will be used for testing
-    testEnvironment: 'jsdom',
 
     // Options that will be passed to the testEnvironment
     // testEnvironmentOptions: {},
