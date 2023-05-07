@@ -26,7 +26,7 @@ export const SideBar = ({ customClass }: SideBarProps) => {
             )}
         >
             <Button
-                theme={ButtonTheme.CLEAN}
+                theme={ButtonTheme.VISIBLE}
                 data-testid="toggle-btn"
                 onClick={toggle}
             >

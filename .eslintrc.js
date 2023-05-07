@@ -3,28 +3,23 @@ module.exports = {
         browser: true,
         jest: true,
     },
-    extends: [
-        'plugin:react/recommended',
-        'airbnb',
-    ],
-    overrides: [
-    ],
+    extends: ['plugin:react/recommended', 'airbnb', 'plugin:storybook/recommended'],
+    overrides: [],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: [
-        'react',
-        '@typescript-eslint',
-    ],
+    plugins: ['react', '@typescript-eslint'],
     rules: {
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
         indent: ['error', 4],
         'no-undef': 'warn',
         'react/react-in-jsx-scope': 'off',
-        'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx', '.tsx'] }],
+        'react/jsx-filename-extension': ['error', {
+            extensions: ['.js', '.jsx', '.tsx'],
+        }],
         'no-unused-vars': 'warn',
         'react/jsx-props-no-spreading': 'warn',
         'linebreak-style': 'off',
